@@ -1,0 +1,121 @@
+* {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(10, 6, 22);
+    height: 100%;
+    display: flex;
+    &::before {
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: linear-gradient(red, rgb(255, 232, 21));
+        clip-path: circle(22% at 30% 20%);
+        z-index: -1;
+
+        /* opacity: 0; */
+    }
+
+    &::after {
+        content: '';
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: linear-gradient(red, rgb(255, 232, 21));
+        clip-path: circle(22% at 70% 90%);
+        z-index: -1;
+
+        /* opacity: 0; */
+    }
+}
+
+.container {
+    display: block;
+    position: absolute;
+    // padding-top: 10%;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: auto;
+    
+    .game {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: 3000;
+        backdrop-filter: blur(15px);
+        overflow: auto;
+
+        #button {
+            position: absolute;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: rgb(36, 17, 93);
+            border: 5px solid #4c9fd6;
+            font-weight: 600;
+            font-size: 60px;
+            padding: 10px 50px;
+            border-radius: 15px;
+            background: linear-gradient(red, yellow);
+            transition: 0.2s;
+            user-select: none;
+            &:hover {
+                background: linear-gradient(yellow,green);
+                color:rgb(28, 114, 114); 
+            }
+            &:active {
+                transform: scale(1.1);
+            }
+        }
+
+        canvas {
+            display: block;
+            width: cover;
+            height: 100%;
+            margin: 0 auto;
+        }
+        
+    }
+
+    &::before {
+        content: '';
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        position: absolute;
+        background: linear-gradient(#07b30a, #3503fc);
+        clip-path: circle(10% at 30% 80%);
+        z-index: -1;
+        /* opacity: 0; */
+    }
+
+    &::after {
+        content: '';
+        bottom: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        position: absolute;
+        background: linear-gradient(#07b30a, #3503fc);
+        clip-path: circle(15% at 70% 30%);
+        z-index: -1;
+        /* opacity: 0; */
+    }
+}
+
+
+
+
+
+
